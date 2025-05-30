@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="appcolor">#2D1938</color>
+    <color name="facebook">#3c62ac</color>
+    <color name="google">#B4B68D8D</color>
+    <color name="backgroundcolor">#495F396B</color>
+    <color name="textbackground">#49A36EB6</color>
+    <color name="layoutbackground">#E6DDD4E2</color>
+    <color name="linearlayoutcolor">#6D553264</color>
+    <color name="gray">#808080</color>
+</resources>

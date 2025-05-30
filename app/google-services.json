@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "258518355963",
+    "project_id": "beathub-85dde",
+    "storage_bucket": "beathub-85dde.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258518355963:android:cdc6ea4601d8e803ecc55e",
+        "android_client_info": {
+          "package_name": "com.example.firstproject.beathub20"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6RKNPjj7hnOQgFs1H1UxjVv2HS6TfhXQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

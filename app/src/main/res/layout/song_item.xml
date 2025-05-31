@@ -1,6 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
-    android:padding="12dp"
+    android:padding="10dp"
     android:gravity="center_vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/imageViewAlbum"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:scaleType="centerCrop"
         android:src="@drawable/placeholder_album"
         android:background="@drawable/image_rounded"
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:text="Song Title"
             android:textStyle="bold"
-            android:textSize="16sp"
+            android:textSize="12sp"
             android:textColor="@color/black"
             android:maxLines="1"
             android:ellipsize="end" />
@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Artist"
-            android:textSize="14sp"
+            android:textSize="10sp"
             android:textColor="@color/gray"
             android:maxLines="1"
             android:ellipsize="end" />

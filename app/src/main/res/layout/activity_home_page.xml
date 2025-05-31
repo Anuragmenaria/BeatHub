@@ -1,28 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="@android:color/white"
-    android:padding="16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/layoutbackground"
+    android:orientation="vertical"
+    android:padding="16dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginTop="5dp">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:src="@drawable/musicapk2" />
+
 
     <TextView
         android:id="@+id/homeTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="🎵 BeatHub"
-        android:textSize="24sp"
+        android:fontFamily="cursive"
+        android:text="BeatHub"
+        android:textColor="@color/appcolor"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@android:color/black"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp" />
+        />
+
+</LinearLayout>
+
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="28dp"
-        android:background="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
         android:elevation="2dp"
         android:iconifiedByDefault="false"
         android:queryHint="Search by title or artist" />
@@ -33,5 +49,6 @@
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:layout_weight="1"
-        android:padding="5dp"/>
+        android:elevation="2dp"
+        android:padding="5dp" />
 </LinearLayout>

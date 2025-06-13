@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+        <item android:id="@+id/nav_view_profile" android:icon="@drawable/person" android:title="View Profile" />
+        <item android:id="@+id/nav_recents" android:icon="@drawable/recent" android:title="Recents" />
+        <item android:id="@+id/nav_settings" android:icon="@drawable/settings" android:title="Settings and privacy" />
+        <item android:id="@+id/nav_logout" android:icon="@drawable/logout" android:title="Logout" />
+        <item android:id="@+id/nav_buttonLikedSongs" android:icon="@drawable/ic_heart_outline" android:title="Liked Songs"/>
+    </group>
+</menu>

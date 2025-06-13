@@ -2,7 +2,6 @@ package com.example.firstproject.beathub20;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -13,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView loginId , register;
+    TextView loginId , register , skips;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,23 +26,21 @@ public class MainActivity extends AppCompatActivity {
         });
         loginId = findViewById(R.id.loginInid);
         register = findViewById(R.id.registerid);
+        skips = findViewById(R.id.skipsid);
 
-        loginId.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this , loginpage.class);
-                startActivity(i);
-            }
+        loginId.setOnClickListener(v -> {
+            Intent i = new Intent(MainActivity.this , loginpage.class);
+            startActivity(i);
         });
 
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               Intent i = new Intent(MainActivity.this , registerpage.class);
-               startActivity(i);
-            }
+        register.setOnClickListener(v -> {
+           Intent i = new Intent(MainActivity.this , registerpage.class);
+           startActivity(i);
         });
-
+        skips.setOnClickListener(v -> {
+            Intent i = new Intent(MainActivity.this , HomePage.class);
+            startActivity(i);
+        });
 
 
     }

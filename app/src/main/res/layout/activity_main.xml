@@ -18,37 +18,37 @@
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:background="@drawable/layoutbackground">
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="280dp"
-                android:layout_height="213dp"
-                android:layout_marginTop="10dp"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/musicapk2" />
+
 
             <TextView
                 android:id="@+id/cafehouse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:elevation="8dp"
                 android:fontFamily="cursive"
                 android:text="BeatHub"
                 android:textColor="@color/appcolor"
-                android:textSize="65sp"
-                android:elevation="8dp"/>
-
+                android:textSize="50sp" />
 
             <TextView
                 android:id="@+id/loginInid"
-                android:layout_width="match_parent"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:text="Login"
                 android:textSize="25sp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:background="@drawable/musicappedit"
                 android:textStyle="bold"
@@ -58,15 +58,15 @@
                 android:layout_marginRight="10dp"
                 android:shadowDy="4"
                 android:shadowColor="@color/black"
-                android:elevation="10dp"/>
+                android:elevation="2dp"/>
 
             <TextView
                 android:id="@+id/registerid"
-                android:layout_width="match_parent"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:text="Register"
                 android:textSize="25sp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:background="@drawable/musicappedit"
                 android:textStyle="bold"
@@ -80,13 +80,13 @@
                 android:layout_marginRight="10dp"/>
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/skipsid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:padding="8dp"
-                android:text="----------Skip---------"
+                android:text="Skip"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"/>

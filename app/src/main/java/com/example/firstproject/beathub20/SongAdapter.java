@@ -12,16 +12,15 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
 
+import java.util.ArrayList;
+import java.util.Locale;
 
 public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder> {
 
     Context context;
     ArrayList<Song> songs;
-    ArrayList<Song> fullList; // 💡 To store original data for filtering
+    ArrayList<Song> fullList;
 
     public SongAdapter(Context context, ArrayList<Song> songs) {
         this.context = context;
@@ -54,6 +53,24 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
                     .into(holder.albumArt);
         }
 
+        // Set the like icon state
+        holder.likeIcon.setImageResource(song.isLiked() ?
+                R.drawable.ic_heart_filled : R.drawable.ic_heart_outline);
+
+        holder.likeIcon.setOnClickListener(v -> {
+            boolean liked = !song.isLiked();
+            song.setLiked(liked);
+            holder.likeIcon.setImageResource(liked ?
+                    R.drawable.ic_heart_filled : R.drawable.ic_heart_outline);
+
+            // ✅ Update LikedSongsManager
+            if (liked) {
+                LikedSongsManager.getInstance().likeSong(song);
+            } else {
+                LikedSongsManager.getInstance().unlikeSong(song);
+            }
+        });
+
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, MusicPlayerActivity.class);
             intent.putExtra("title", song.getTitle());
@@ -63,22 +80,20 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
             context.startActivity(intent);
         });
     }
-    // Add this method to update both lists
+
     public void updateFullList(ArrayList<Song> fullList) {
-        this.fullList = new ArrayList<>(fullList); // update backup list
-        this.songs = new ArrayList<>(fullList);    // update shown list
+        this.fullList = new ArrayList<>(fullList);
+        this.songs = new ArrayList<>(fullList);
         notifyDataSetChanged();
     }
-
 
     @Override
     public int getItemCount() {
         return songs.size();
     }
 
-    // ✅ Filter method
     public void filter(String query) {
-        query = query.toLowerCase();
+        query = query.toLowerCase(Locale.ROOT);
         songs.clear();
         if (query.isEmpty()) {
             songs.addAll(fullList);
@@ -93,18 +108,16 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
         notifyDataSetChanged();
     }
 
-
-
     public static class SongViewHolder extends RecyclerView.ViewHolder {
         TextView title, artist;
-        ImageView albumArt;
+        ImageView albumArt, likeIcon;
 
         public SongViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.textViewTitle);
             artist = itemView.findViewById(R.id.textViewArtist);
             albumArt = itemView.findViewById(R.id.imageViewAlbum);
+            likeIcon = itemView.findViewById(R.id.imageViewLike);
         }
     }
 }
-

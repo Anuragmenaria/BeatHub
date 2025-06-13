@@ -5,6 +5,7 @@ public class Song {
     private String artist;
     private String audioUrl;
     private String imageUrl;
+    private boolean liked; // 🔁 New field for liked songs
 
     public Song() {
         // Required empty constructor for Firestore
@@ -15,8 +16,10 @@ public class Song {
         this.artist = artist;
         this.audioUrl = audioUrl;
         this.imageUrl = imageUrl;
+        this.liked = false; // default
     }
 
+    // Getters
     public String getTitle() {
         return title;
     }
@@ -33,6 +36,11 @@ public class Song {
         return imageUrl;
     }
 
+    public boolean isLiked() {
+        return liked;
+    }
+
+    // Setters
     public void setTitle(String title) {
         this.title = title;
     }
@@ -47,5 +55,9 @@ public class Song {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public void setLiked(boolean liked) {
+        this.liked = liked;
     }
 }

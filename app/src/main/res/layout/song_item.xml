@@ -1,6 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
-    android:padding="12dp"
+    android:padding="10dp"
     android:gravity="center_vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,21 +8,23 @@
     android:elevation="2dp"
     android:layout_marginBottom="8dp">
 
+    <!-- Album Art -->
     <ImageView
         android:id="@+id/imageViewAlbum"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:scaleType="centerCrop"
         android:src="@drawable/placeholder_album"
         android:background="@drawable/image_rounded"
         android:clipToOutline="true" />
 
+    <!-- Title and Artist -->
     <LinearLayout
         android:orientation="vertical"
-        android:layout_marginStart="12dp"
         android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1">
 
         <TextView
             android:id="@+id/textViewTitle"
@@ -30,8 +32,8 @@
             android:layout_height="wrap_content"
             android:text="Song Title"
             android:textStyle="bold"
-            android:textSize="16sp"
-            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textColor="@color/appcolor"
             android:maxLines="1"
             android:ellipsize="end" />
 
@@ -40,9 +42,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Artist"
-            android:textSize="14sp"
+            android:textSize="10sp"
             android:textColor="@color/gray"
             android:maxLines="1"
             android:ellipsize="end" />
     </LinearLayout>
+
+    <!-- Like Button -->
+    <ImageView
+        android:id="@+id/imageViewLike"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_heart_outline"
+        android:contentDescription="Like"
+        android:padding="6dp" />
 </LinearLayout>

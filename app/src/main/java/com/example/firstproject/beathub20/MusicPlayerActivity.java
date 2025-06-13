@@ -55,6 +55,9 @@ public class MusicPlayerActivity extends AppCompatActivity {
         audioUrl = intent.getStringExtra("audioUrl");
         imageUrl = intent.getStringExtra("imageUrl");
 
+        MiniPlayerInfo.setSong(title, artist, imageUrl);
+
+
         // Set text and image
         textViewTitle.setText(title);
         textViewArtist.setText(artist);
